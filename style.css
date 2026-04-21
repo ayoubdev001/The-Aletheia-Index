@@ -1,0 +1,78 @@
+body {
+   background-color: #424242;
+   background-size: cover;
+   margin: 0rem;
+   font-family: "Imbue", serif;
+   font-size: large;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1.25rem;
+}
+.nav-bar {
+    margin-right: 5rem;
+    word-spacing: 1.5rem;
+}
+.nav-bar a{
+    letter-spacing: 0.1rem;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+.nav-bar a:hover {
+   color: #c4c4c4;
+}
+.search-button {
+    display: flex;
+    padding: 2.5rem;
+    margin-top: 2rem;
+    margin-left: 4rem;
+}
+.search-button button {
+    background-color: rgb(31, 28, 248);
+    position: relative;
+    width: 6rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 1.875rem;
+    padding: 1rem;
+}
+.search-button button:hover {
+    background-color: rgb(2, 2, 189);
+}
+.search-button input {
+    outline: none;
+    width: 18rem;
+    border: none;
+    border-radius: 1.875rem;
+    padding: 1rem;
+}
+.memo {
+
+    opacity: 40%;
+    margin-left: 23rem;
+    margin-top: 4rem;
+    padding: 0.625rem;
+    width: 39.375rem;
+    background-color: rgb(255, 255, 255);
+    border-radius: 2rem;
+}
+.memo h3{
+    margin: 1rem;
+    font-size: x-large;
+}
+#section-title{
+    margin-left: 3rem;
+}
+h1{
+    color: rgb(255, 0, 0);
+     margin-left: 3rem;
+}
+#section1 {
+    background-color: #c7bebe;
+    margin: 1rem;
+    padding: 2rem;
+    border-radius: 2rem;
+}
