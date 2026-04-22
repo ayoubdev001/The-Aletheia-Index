@@ -1,23 +1,31 @@
+html {
+  scroll-behavior: smooth;
+}
 body {
    background-color: #424242;
    background-size: cover;
    margin: 0rem;
    font-family: "Imbue", serif;
-   font-size: large;
+   font-size: medium;
 }
 
+/* MOBILE FIRST - All mobile devices */
 .header{
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 1.25rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
 }
 .nav-bar {
-    margin-right: 5rem;
-    word-spacing: 1.5rem;
+    margin-right: 0;
+    word-spacing: 0.5rem;
+    text-align: center;
+    font-size: small;
 }
 .nav-bar a{
-    letter-spacing: 0.1rem;
+    letter-spacing: 0.05rem;
     color: rgb(255, 255, 255);
     text-decoration: none;
 }
@@ -26,53 +34,252 @@ body {
 }
 .search-button {
     display: flex;
-    padding: 2.5rem;
-    margin-top: 2rem;
-    margin-left: 4rem;
+    flex-direction: column;
+    padding: 1rem;
+    margin-top: 0.5rem;
+    margin-left: 0;
+    gap: 0.5rem;
 }
 .search-button button {
     background-color: rgb(31, 28, 248);
     position: relative;
-    width: 6rem;
+    width: 100%;
     cursor: pointer;
     border: none;
     border-radius: 1.875rem;
-    padding: 1rem;
+    padding: 0.75rem;
 }
 .search-button button:hover {
     background-color: rgb(2, 2, 189);
 }
 .search-button input {
     outline: none;
-    width: 18rem;
+    width: 100%;
     border: none;
     border-radius: 1.875rem;
-    padding: 1rem;
+    padding: 0.75rem;
+    box-sizing: border-box;
 }
 .memo {
-
     opacity: 40%;
-    margin-left: 23rem;
-    margin-top: 4rem;
+    margin: 1rem auto;
     padding: 0.625rem;
-    width: 39.375rem;
+    width: fit-content;
     background-color: rgb(255, 255, 255);
-    border-radius: 2rem;
+    border-radius: 1rem;
 }
 .memo h3{
-    margin: 1rem;
+    margin: 0.5rem;
     font-size: x-large;
 }
-#section-title{
-    margin-left: 3rem;
+#Quotes{
+    text-align: center;
+    font-size: x-large;
+}
+#Authors{
+    text-align: center;
+    font-size: x-large;
 }
 h1{
-    color: rgb(255, 0, 0);
-     margin-left: 3rem;
+    letter-spacing: 0.3rem;
+    font-size: large;
+    color: rgb(255, 255, 255);
+    margin-left: 0;
+    margin: 1rem 0;
 }
-#section1 {
+h1:hover{
+    color: rgb(165, 165, 165);
+}
+.section1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background-color: #c7bebe;
+    padding: 1rem;
     margin: 1rem;
-    padding: 2rem;
-    border-radius: 2rem;
+    border-radius: 1rem;
+}
+.section1 h2 {
+    white-space: normal;
+    font-size: large;
+}
+.section1-desc {
+    margin-top: 1rem;
+    font-size: small;
+}
+.section1-image {
+    margin-left: 0;
+    margin-top: 1rem;
+    border-radius: 1rem;
+    max-width: 100%;
+    height: auto;
+}
+#the-quote {
+    font-size: large;
+    color: rgb(97, 87, 1);
+    white-space: normal;
+}
+
+/* SMALL TABLETS and up (640px) */
+@media (min-width: 640px) {
+    body {
+        font-size: medium;
+    }
+    
+    .search-button {
+        flex-direction: row;
+        padding: 1.25rem;
+        margin-left: 0.5rem;
+    }
+    
+    .search-button input {
+        width: 60%;
+    }
+    
+    .section1 {
+        padding: 1.5rem;
+        margin: 1rem 0.5rem;
+    }
+    
+    .section1 h2 {
+        font-size: large;
+    }
+}
+
+/* TABLETS and up (768px) */
+@media (min-width: 768px) {
+    body {
+        font-size: large;
+    }
+    
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1.25rem;
+    }
+    
+    .nav-bar {
+        margin-right: 2rem;
+        word-spacing: 1rem;
+        font-size: medium;
+    }
+    
+    .search-button {
+        flex-direction: row;
+        padding: 1.5rem;
+        margin-top: 1rem;
+        margin-left: 2rem;
+    }
+    
+    .search-button input {
+        width: 12rem;
+    }
+    
+    .search-button button {
+        width: auto;
+    }
+    
+    .memo {
+        margin: 1rem auto;
+        width: 25rem;
+    }
+    
+    .memo h3 {
+        font-size: x-large;
+    }
+    
+    h1 {
+        font-size: xx-large;
+        margin-left: 1rem;
+    }
+    
+    .section1 {
+        padding: 2rem;
+        margin: 1rem 5rem;
+        border-radius: 2rem;
+    }
+    
+    .section1 h2 {
+        font-size: x-large;
+    }
+    
+    .section1-desc {
+        margin-top: 1.5rem;
+        font-size: medium;
+    }
+    
+    .section1-image {
+        margin-left: 2rem;
+        margin-top: 2rem;
+        border-radius: 2rem;
+    }
+}
+
+/* DESKTOPS and up (1024px) */
+@media (min-width: 1024px) {
+    body {
+        font-size: large;
+    }
+    
+    .header {
+        padding: 1.25rem;
+    }
+    
+    .nav-bar {
+        margin-right: 5rem;
+        word-spacing: 1.5rem;
+        font-size: large;
+    }
+    
+    .search-button {
+        padding: 2.5rem;
+        margin-top: 2rem;
+        margin-left: 4rem;
+    }
+    
+    .search-button input {
+        width: 18rem;
+    }
+    
+    .search-button button {
+        width: 6rem;
+    }
+    
+    .memo {
+        margin: 4rem auto;
+        width: 39.375rem;
+    }
+    
+    h1 {
+        font-size: xx-large;
+        margin-left: 3rem;
+    }
+    
+    .section1 {
+        padding: 2rem;
+        margin: 0rem 10rem;
+        border-radius: 2rem;
+    }
+    
+    .section1 h2 {
+        white-space: nowrap;
+        font-size: x-large;
+    }
+    
+    .section1-desc {
+        margin-top: 2rem;
+        font-size: large;
+    }
+    
+    .section1-image {
+        margin-left: 4rem;
+        margin-top: 2rem;
+        border-radius: 3rem;
+        max-width: 300px;
+    }
+    
+    #the-quote {
+        font-size: x-large;
+        white-space: nowrap;
+    }
 }
